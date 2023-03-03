@@ -1,0 +1,25 @@
+{
+    "include": [
+        "lib/*.js", "lib/index.ts", "lib/index.ts",
+    ],
+    "exclude": [
+        "node_modules/*",
+        "dist/*"
+    ],
+    "compilerOptions": {
+        "target": "ES2020",
+        "lib": [
+            "ES2020"
+        ],
+        "module": "ES2020",
+        "moduleResolution": "node",
+        "allowJs": true,
+        "checkJs": true,
+        "declaration": true,
+        "emitDeclarationOnly": true,
+        "allowSyntheticDefaultImports": true,
+        "skipLibCheck": true,
+        "strict": true,
+        "outDir": "dist"
+    }
+}
