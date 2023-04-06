@@ -43,7 +43,7 @@
   "license": "MIT",
   "devDependencies": {
     "@types/mdast": "^3.0.10",
-    "asciimath-parser": "^0.4.6",
+    "asciimath-parser": "^0.5.8",
     "bumpp": "^9.0.0",
     "rehype-stringify": "^9.0.3",
     "remark-parse": "^10.0.1",

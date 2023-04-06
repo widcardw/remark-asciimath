@@ -18,11 +18,6 @@ type RestrictedEscapeConfig = Required<EscapeConfig>
 
 type AmConfig = EscapeConfig & AsciiMathConfig
 
-/**
- * @param {string} content 
- * @param {AsciiMath} am 
- * @returns 
- */
 function createAsciiMathBlock(content: string, am: AsciiMath) {
   return {
     type: 'math',
@@ -36,11 +31,6 @@ function createAsciiMathBlock(content: string, am: AsciiMath) {
   }
 }
 
-/**
- * @param {string} content 
- * @param {AsciiMath} am 
- * @returns
- */
 function createAsciiMathSpan(content: string, am: AsciiMath) {
   return {
     type: 'math',
@@ -54,11 +44,6 @@ function createAsciiMathSpan(content: string, am: AsciiMath) {
   }
 }
 
-/**
- * 
- * @param {string[] | string | undefined} prefixes 
- * @returns 
- */
 function normalizePrefixes(prefixes?: string | string[]) {
   if (typeof prefixes === 'string')
     return [prefixes]
@@ -69,13 +54,6 @@ function normalizePrefixes(prefixes?: string | string[]) {
   return ['am', 'asciimath']
 }
 
-/**
- * 
- * @param {import('mdast').Root} ast 
- * @param {RestrictedEscapeConfig} config 
- * @param {AsciiMath} am 
- * @returns 
- */
 function visitCodeBlock(ast: Root, config: RestrictedEscapeConfig, am: AsciiMath) {
   const opening = config.inlineOpen.replace(/^\`+/, '')
   const closing = config.inlineClose.replace(/\`+$/, '')
@@ -108,16 +86,11 @@ function visitCodeBlock(ast: Root, config: RestrictedEscapeConfig, am: AsciiMath
   )
 }
 
-/** @type {import('unified').Plugin<[AmConfig?], MdastRoot>} */
 export const remarkAsciiMath: Plugin<[AmConfig], Root> = (options: AmConfig = {}) => {
   const prefixes = normalizePrefixes(options.prefixes)
   const inlineOpen = options.inlineOpen || '`$'
   const inlineClose = options.inlineClose || '$`'
-  const am = new AsciiMath({
-    display: options.display,
-    extConst: options.extConst,
-    replaceBeforeTokenizing: options.replaceBeforeTokenizing,
-  })
+  const am = new AsciiMath(options)
 
   return function transformer(ast, vFile, next) {
     visitCodeBlock(ast, { prefixes, inlineClose, inlineOpen }, am)

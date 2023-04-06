@@ -2,7 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@types/mdast': ^3.0.10
-  asciimath-parser: ^0.4.6
+  asciimath-parser: ^0.5.8
   bumpp: ^9.0.0
   rehype-stringify: ^9.0.3
   remark-parse: ^10.0.1
@@ -17,7 +17,7 @@ specifiers:
 
 devDependencies:
   '@types/mdast': 3.0.10
-  asciimath-parser: 0.4.6
+  asciimath-parser: 0.5.8
   bumpp: 9.0.0
   rehype-stringify: 9.0.3
   remark-parse: 10.0.1
@@ -583,8 +583,8 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /asciimath-parser/0.4.6:
-    resolution: {integrity: sha512-rQul/F/n+ld+YoDpNKVcD4YeTIPlG56He619/a3Z96lBp7ABR6M8povmcZV/7pTHGyIvObdRkjt3ezIZccreKQ==}
+  /asciimath-parser/0.5.8:
+    resolution: {integrity: sha512-zsSarlK2dzl+geyrz88jiUarIK9r7x9qX7HwHwkjuJGkme0spNdakgiHuopfCYr3Yx2w/kOGkeiHq+1UK4Rt3w==}
     dev: true
 
   /assertion-error/1.1.0:
