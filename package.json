@@ -1,6 +1,6 @@
 {
   "name": "@widcardw/remark-asciimath",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "",
   "author": "widcardw <widcardw@foxmail.com>",
   "homepage": "https://github.com/widcardw/remark-asciimath#readme",
@@ -43,7 +43,7 @@
   "license": "MIT",
   "devDependencies": {
     "@types/mdast": "^3.0.10",
-    "asciimath-parser": "^0.5.8",
+    "asciimath-parser": "^0.6.2",
     "bumpp": "^9.0.0",
     "rehype-stringify": "^9.0.3",
     "remark-parse": "^10.0.1",
